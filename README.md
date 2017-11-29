@@ -1,7 +1,7 @@
 # Android-Lib
 开发中常用的lib
 
-### xUtils
+### xUtils（网络请求框架）
 
 接口请求数据格式
 
@@ -35,4 +35,13 @@ HttpUtils httpUtils = new HttpUtils();
 //                upLoadLog();
            }
        });
+```
+
+### ButterKnife（依赖注入）
+
+配合AS插件Android Butterknife Zelezny来使用
+
+```
+compile'com.jakewharton:butterknife:8.2.1'
+compile'com.jakewharton:butterknife-compiler:8.2.1'
 ```
