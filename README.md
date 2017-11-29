@@ -45,3 +45,27 @@ HttpUtils httpUtils = new HttpUtils();
 compile'com.jakewharton:butterknife:8.2.1'
 compile'com.jakewharton:butterknife-compiler:8.2.1'
 ```
+
+### Debug模式下也签名
+
+这样子即便是开发环境下运行也会是正式包，遇到需要签名测试才能测试的时候，比如微信支付，分享。
+
+```
+
+        signingConfigs {
+            apptag {
+                keyAlias 'itgoyotalk'
+                keyPassword 'xxxx'
+                storeFile file('C:\\Users\\admin\\Desktop\\android.keystore')
+                storePassword 'xxxx'
+            }
+        }
+
+
+        debug {
+       //            jniDebuggable true
+                   signingConfig signingConfigs.talk915
+               }
+
+
+```
